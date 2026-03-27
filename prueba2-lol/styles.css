@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cfcfcf;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  width: min(900px, 96vw);
+  height: auto;
+  image-rendering: auto;
+}

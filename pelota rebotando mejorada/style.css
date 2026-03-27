@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dff1ff;
+  overflow: hidden;
+}
+
+.escena {
+  position: relative;
+  width: 700px;
+  height: 400px;
+}
+
+.suelo {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 4px;
+}
+
+.pelota {
+  position: absolute;
+  left: 80px;
+  bottom: 46px;
+  width: 70px;
+  height: 70px;
+  background: crimson;
+  border-radius: 50%;
+  animation: rebote 1s infinite ease-in-out;
+}
+
+.sombra {
+  position: absolute;
+  left: 85px;
+  bottom: 28px;
+  width: 60px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: sombra 1s infinite ease-in-out;
+}
+
+@keyframes rebote {
+  0% {
+    bottom: 46px;
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  20% {
+    transform: scaleX(0.95) scaleY(1.05);
+  }
+
+  50% {
+    bottom: 260px;
+    transform: scaleX(1) scaleY(1);
+  }
+
+  80% {
+    transform: scaleX(0.98) scaleY(1.02);
+  }
+
+  100% {
+    bottom: 46px;
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+}
+
+@keyframes sombra {
+  0% {
+    transform: scaleX(1.2);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scaleX(0.6);
+    opacity: 0.12;
+  }
+
+  100% {
+    transform: scaleX(1.2);
+    opacity: 0.3;
+  }
+}
